@@ -76,6 +76,7 @@ module.exports = (app) => {
 
     app.post('/operation',async (req,res) => {
         let newOperation = {
+            idModule: req.body.idModule,
             gloveCode: req.body.gloveCode,
             number1: req.body.number1,
             operation: req.body.operation,
@@ -103,10 +104,7 @@ module.exports = (app) => {
         let newResponse = {
             idOperation: req.body.idOperation,
             gloveCode: req.body.gloveCode,
-            answer: req.body.answer,
-            // ACTION: req.body.ACTION,
-            // topic: req.body.topic,
-            // timestamp: req.body.timestamp,
+            answer: req.body.answer
         }
 
         try{

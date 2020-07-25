@@ -65,8 +65,8 @@ operationModel.createOperation = async(newOperation) => {
 
     const connection = await pool.getConnection();
     try{
-        const sql = "CALL SP_CreateQuestion(?,?,?,?,?,?,?,?)"
-        const data = await connection.query(sql,[newOperation.gloveCode,newOperation.number1,newOperation.operation,newOperation.number2,newOperation.result,newOperation.answer,newOperation.action,newOperation.topic]);
+        const sql = "CALL SP_CreateQuestion(?,?,?,?,?,?,?,?,?)"
+        const data = await connection.query(sql,[newOperation.idModule,newOperation.gloveCode,newOperation.number1,newOperation.operation,newOperation.number2,newOperation.result,newOperation.answer,newOperation.action,newOperation.topic]);
         return data[0];
     }catch(ex){
         console.log(ex);
