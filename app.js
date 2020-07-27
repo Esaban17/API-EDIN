@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
 require('./src/routes/OperationRoutes')(app);
 require('./src/routes/UserRoutes')(app);
 require('./src/routes/StatisticsRoutes')(app);
+require('./src/routes/NetworkRoutes')(app);
 
 app.listen(app.get('port'), () => {
     console.log(`Servidor Corriendo en el Puerto ${app.get('port')}`);
