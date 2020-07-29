@@ -1,9 +1,9 @@
 const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
-    host: 'localhost',
+    host: '192.168.1.30',
     user: 'root',
-    password: '',
-    database: 'edin_db',
+    password: 'edin_2020',
+    database: 'Edin_DB',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
