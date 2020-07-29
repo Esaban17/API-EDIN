@@ -35,7 +35,7 @@ CREATE TABLE Operations(
     result DOUBLE,
     answer INT,
     ACTION VARCHAR(32),
-    topic VARCHAR(8),
+    topic VARCHAR(128),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (idModule) REFERENCES Modules(idModule),
