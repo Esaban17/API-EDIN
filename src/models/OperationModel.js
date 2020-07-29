@@ -4,7 +4,7 @@ const operationModel = {}
 operationModel.getAll = async() => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query('SELECT * FROM operations');
+        const data = await connection.query('SELECT * FROM Operations');
         return data[0];
     }catch(ex){
         console.log(ex);
@@ -16,7 +16,7 @@ operationModel.getAll = async() => {
 operationModel.getOperation = async(idOperation) => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query(`SELECT * FROM operations WHERE idOperation = ${idOperation}`);
+        const data = await connection.query(`SELECT * FROM Operations WHERE idOperation = ${idOperation}`);
         return data[0];
     }catch(ex){
         console.log(ex);
@@ -28,7 +28,7 @@ operationModel.getOperation = async(idOperation) => {
 operationModel.getResponsesById = async(idOperation) => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query(`SELECT * FROM responses WHERE idOperation = ${idOperation}`);
+        const data = await connection.query(`SELECT * FROM Responses WHERE idOperation = ${idOperation}`);
         return data[0];
     }catch(ex){
         console.log(ex);
@@ -40,7 +40,7 @@ operationModel.getResponsesById = async(idOperation) => {
 operationModel.getResponses = async() => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query('SELECT * FROM responses');
+        const data = await connection.query('SELECT * FROM Responses');
         return data[0];
     }catch(ex){
         console.log(ex);
@@ -52,7 +52,7 @@ operationModel.getResponses = async() => {
 operationModel.getLastOperation = async() => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query('SELECT * FROM operations WHERE idOperation = (SELECT MAX(idOperation) FROM operations)');
+        const data = await connection.query('SELECT * FROM Operations WHERE idOperation = (SELECT MAX(idOperation) FROM operations)');
         return data[0];
     }catch(ex){
         console.log(ex);

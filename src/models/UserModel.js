@@ -4,7 +4,7 @@ const userModel = {}
 userModel.getAll = async() => {
     const connection = await pool.getConnection();
     try{
-        const data = await connection.query('SELECT * FROM users');
+        const data = await connection.query('SELECT * FROM Users');
         return data[0];
     }catch(ex){
         console.log(ex);
