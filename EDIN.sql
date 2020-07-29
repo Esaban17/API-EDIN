@@ -74,7 +74,7 @@ CREATE PROCEDURE SP_CreateQuestion(
   _result DOUBLE,
   _answer DOUBLE,
   _action VARCHAR(32),
-  _topic VARCHAR(8)
+  _topic VARCHAR(128)
 )
 BEGIN
 	INSERT INTO Operations(idModule,gloveCode,number1,operation,number2,result,answer,ACTION,topic) VALUES (_idModule,_gloveCode,_number1,_operation,_number2,_result,_answer,_action,_topic);
