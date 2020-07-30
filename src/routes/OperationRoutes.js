@@ -90,7 +90,7 @@ module.exports = (app) => {
         try{
             const results = await Operation.createOperation(newOperation);
             if (typeof results !== 'undefined' && results.length > 0) {
-                res.status(200).json({message: 'Pregunta Realizada',operation: newOperation, status: true});
+                res.status(200).json({message: 'Pregunta Realizada',operation: results[0][0], status: true});
             } else {
                 res.status(200).json({message: 'Not Content'});
             }
