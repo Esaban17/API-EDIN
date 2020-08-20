@@ -46,8 +46,6 @@ module.exports = (app) => {
         }
     });
 
-
-
     app.get('/date/:idModule',async (req,res) => {
         let idModule = req.params.idModule
         try{
